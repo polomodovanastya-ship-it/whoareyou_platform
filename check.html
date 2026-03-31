@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Как ты сейчас?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="articles-page">
+    <main>
+      <section class="page-top container">
+        <a class="back-link" href="index.html">← На главную</a>
+        <h1>Как ты сейчас?</h1>
+      </section>
+
+      <section class="section container">
+        <div class="check-flow card" id="check-flow">
+          <article class="check-screen check-screen--active" data-screen="0">
+            <h2>Немного про процесс</h2>
+            <ul class="check-bullets">
+              <li>Это не диагностика и не экстренная помощь.</li>
+              <li>Можно пройти без регистрации.</li>
+              <li>Часть вопросов можно пропустить.</li>
+              <li>В конце ты получишь 1 понятный следующий шаг.</li>
+            </ul>
+            <button class="check-btn" type="button" data-next="1">Продолжить</button>
+          </article>
+
+          <article class="check-screen" data-screen="1">
+            <h2>Сколько тебе лет?</h2>
+            <label class="check-label" for="age">Возраст</label>
+            <select id="age" class="check-select">
+              <option value="" selected>Выбери вариант</option>
+              <option value="14-17">14-17</option>
+              <option value="18-25">18-25</option>
+            </select>
+            <p class="error" id="age-error"></p>
+
+            <div class="check-actions">
+              <button class="check-btn check-btn--ghost" type="button" data-prev="0">Назад</button>
+              <button class="check-btn" type="button" id="age-next">Продолжить</button>
+            </div>
+          </article>
+
+          <article class="check-screen" data-screen="2">
+            <h2>WHO-5</h2>
+            <p class="check-subtitle">Отметь вариант для каждого утверждения за последние 2 недели.</p>
+            <details class="check-hint">
+              <summary>Зачем мы это спрашиваем</summary>
+              <p>Чтобы понять, это больше похоже на временный спад или на устойчивое снижение самочувствия.</p>
+            </details>
+
+            <form id="who5-form" class="who5-form">
+              <fieldset>
+                <legend>Я чувствую себя бодрой(-ым) и в хорошем настроении.</legend>
+                <select name="q1">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="5">Все время</option>
+                  <option value="4">Большую часть времени</option>
+                  <option value="3">Более половины времени</option>
+                  <option value="2">Менее половины времени</option>
+                  <option value="1">Некоторое время</option>
+                  <option value="0">Никогда</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Я чувствую себя спокойной(-ым) и раскованной(-ым).</legend>
+                <select name="q2">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="5">Все время</option>
+                  <option value="4">Большую часть времени</option>
+                  <option value="3">Более половины времени</option>
+                  <option value="2">Менее половины времени</option>
+                  <option value="1">Некоторое время</option>
+                  <option value="0">Никогда</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Я чувствую себя активной(-ым) и энергичной(-ым).</legend>
+                <select name="q3">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="5">Все время</option>
+                  <option value="4">Большую часть времени</option>
+                  <option value="3">Более половины времени</option>
+                  <option value="2">Менее половины времени</option>
+                  <option value="1">Некоторое время</option>
+                  <option value="0">Никогда</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Я просыпаюсь и чувствую себя свежей(-им) и отдохнувшей(-им).</legend>
+                <select name="q4">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="5">Все время</option>
+                  <option value="4">Большую часть времени</option>
+                  <option value="3">Более половины времени</option>
+                  <option value="2">Менее половины времени</option>
+                  <option value="1">Некоторое время</option>
+                  <option value="0">Никогда</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Каждый день со мной происходят вещи, представляющие для меня интерес.</legend>
+                <select name="q5">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="5">Все время</option>
+                  <option value="4">Большую часть времени</option>
+                  <option value="3">Более половины времени</option>
+                  <option value="2">Менее половины времени</option>
+                  <option value="1">Некоторое время</option>
+                  <option value="0">Никогда</option>
+                </select>
+              </fieldset>
+            </form>
+
+            <div class="check-actions">
+              <button class="check-btn check-btn--ghost" type="button" data-prev="1">Назад</button>
+              <button class="check-btn" type="button" id="who5-next">Продолжить</button>
+            </div>
+          </article>
+
+          <article class="check-screen" data-screen="3">
+            <h2>Как это влияет на жизнь</h2>
+            <details class="check-hint">
+              <summary>Зачем мы это спрашиваем</summary>
+              <p>Потому что важно как эмоции влияют на учёбу, работу, отношения и повседневный ритм.</p>
+            </details>
+
+            <form id="functioning-form" class="who5-form">
+              <fieldset>
+                <legend>Учёба, работа или обычные дела давались мне тяжелее, чем обычно.</legend>
+                <select name="f1">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="0">Совсем нет</option>
+                  <option value="1">Немного</option>
+                  <option value="2">Заметно</option>
+                  <option value="3">Сильно</option>
+                  <option value="4">Почти постоянно</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Мне было трудно сосредоточиться или доводить дела до конца.</legend>
+                <select name="f2">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="0">Совсем нет</option>
+                  <option value="1">Немного</option>
+                  <option value="2">Заметно</option>
+                  <option value="3">Сильно</option>
+                  <option value="4">Почти постоянно</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>
+                  Из-за внутреннего напряжения, усталости или переживаний я избегал(а) задач, людей или важных разговоров.
+                </legend>
+                <select name="f3">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="0">Совсем нет</option>
+                  <option value="1">Немного</option>
+                  <option value="2">Заметно</option>
+                  <option value="3">Сильно</option>
+                  <option value="4">Почти постоянно</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Сон, ритм дня или уровень энергии мешали мне жить так, как хотелось бы.</legend>
+                <select name="f4">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="0">Совсем нет</option>
+                  <option value="1">Немного</option>
+                  <option value="2">Заметно</option>
+                  <option value="3">Сильно</option>
+                  <option value="4">Почти постоянно</option>
+                </select>
+              </fieldset>
+            </form>
+            <p class="error" id="functioning-error"></p>
+            <div class="check-actions">
+              <button class="check-btn check-btn--ghost" type="button" data-prev="2">Назад</button>
+              <button class="check-btn" type="button" id="functioning-next">Продолжить</button>
+            </div>
+          </article>
+
+          <article class="check-screen" data-screen="4">
+            <h2>Запрос: желания, опора, выбор</h2>
+            <details class="check-hint">
+              <summary>Зачем мы это спрашиваем</summary>
+              <p>Желания, смыслы и цели важны и могут по-разному влиять на эмоции, а эмоции на них.</p>
+            </details>
+
+            <form id="direction-form" class="who5-form">
+              <fieldset>
+                <legend>Мне трудно понять, чего я на самом деле хочу.</legend>
+                <select name="d1">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Мои текущие цели больше похожи на «надо», чем на «хочу».</legend>
+                <select name="d2">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>У того, чем я живу сейчас, есть для меня личный смысл.</legend>
+                <select name="d3">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Когда мне тяжело, у меня есть хотя бы один человек, рядом с которым можно быть собой.</legend>
+                <select name="d4">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Я чувствую, что могу влиять на свою жизнь, а не только подстраиваться под обстоятельства.</legend>
+                <select name="d5">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Когда нужно принимать решение, я обычно понимаю, на что могу опереться в себе.</legend>
+                <select name="d6">
+                  <option value="" selected>Можно пропустить</option>
+                  <option value="1">Совсем не похоже</option>
+                  <option value="2">Скорее не похоже</option>
+                  <option value="3">И да и нет</option>
+                  <option value="4">Скорее похоже</option>
+                  <option value="5">Очень похоже</option>
+                </select>
+              </fieldset>
+            </form>
+            <p class="error" id="direction-error"></p>
+            <div class="check-actions">
+              <button class="check-btn check-btn--ghost" type="button" data-prev="3">Назад</button>
+              <button class="check-btn" type="button" id="direction-next">Показать следующий шаг</button>
+            </div>
+          </article>
+
+          <article class="check-screen" data-screen="5">
+            <h2>Следующий шаг</h2>
+            <p id="result-text" class="result-headline"></p>
+            <div class="metrics-grid">
+              <article class="metric-card">
+                <h3>Эмоции сейчас</h3>
+                <p class="metric-name">WHO-5 / 0–100</p>
+                <p class="metric-value" id="metric-who5">—</p>
+              </article>
+              <article class="metric-card">
+                <h3>Как это влияет на жизнь</h3>
+                <p class="metric-name">Functioning / 0–4</p>
+                <p class="metric-value" id="metric-functioning">—</p>
+              </article>
+              <article class="metric-card">
+                <h3>Запрос: желания, опора, выбор</h3>
+                <p class="metric-name">Direction / 0–100</p>
+                <p class="metric-value" id="metric-direction">—</p>
+              </article>
+            </div>
+
+            <div class="result-overloaded" id="result-overloaded" hidden>
+              <p>
+                Похоже, это уже не просто сложная неделя: ресурс заметно просел, и это влияет на повседневную жизнь.
+              </p>
+              <p><strong>3 наблюдения:</strong></p>
+              <ul class="check-bullets">
+                <li>Сейчас у тебя мало восстановления и интереса</li>
+                <li>Это уже мешает учёбе, делам или ритму жизни</li>
+                <li>Тебе может быть полезнее не только контент, но и живая регулярная поддержка</li>
+              </ul>
+              <div class="check-actions">
+                <a class="onboarding__cta" href="index.html#discuss">Перейти в чат</a>
+                <a class="onboarding__cta onboarding__cta--light" href="index.html#read">Послушать опыт других</a>
+                <a class="onboarding__cta onboarding__cta--light" href="articles.html">Почитать статью</a>
+              </div>
+            </div>
+
+            <div class="check-actions" id="result-default-actions">
+              <a class="onboarding__cta" href="index.html#discuss">Обсудить со специалистом</a>
+              <a class="onboarding__cta onboarding__cta--light" href="index.html#read">Пока изучить статьи</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="check.js"></script>
+  </body>
+</html>
