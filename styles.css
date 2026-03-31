@@ -143,7 +143,6 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.routes,
 .roles,
 .co-design__grid,
 .library,
@@ -185,27 +184,14 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.routes {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.route {
+.onboarding {
   padding: 1.4rem;
-}
-
-.route--urgent {
   background:
-    linear-gradient(160deg, rgba(233, 111, 43, 0.08), rgba(255, 250, 243, 1) 42%),
+    radial-gradient(circle at right top, rgba(233, 111, 43, 0.11), transparent 38%),
     var(--surface);
 }
 
-.route ul {
-  margin: 0.8rem 0 1.2rem;
-  padding-left: 1rem;
-  color: var(--ink-soft);
-}
-
-.route-tags {
+.symptom-tags {
   list-style: none;
   margin: 0.8rem 0 0.2rem;
   padding: 0;
@@ -214,7 +200,8 @@ h1 {
   flex-wrap: wrap;
 }
 
-.route-tags li {
+.symptom-tags li a {
+  display: inline-block;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.78rem;
@@ -222,6 +209,45 @@ h1 {
   color: #12353a;
   background: #d4efe6;
   border: 1px solid #a8d8c9;
+  text-decoration: none;
+}
+
+.onboarding__quote {
+  margin-top: 1rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.onboarding__value {
+  margin-top: 0.55rem;
+  color: var(--ink-soft);
+}
+
+.onboarding__grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.onboarding__grid ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+  color: var(--ink-soft);
+}
+
+.onboarding__grid p {
+  margin: 0.45rem 0 0.8rem;
+}
+
+.onboarding__cta {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.72rem 1rem;
+  background: var(--bg-strong);
+  color: #fffaf3;
+  font-weight: 700;
 }
 
 button {
@@ -291,7 +317,6 @@ button:hover {
 
 .section,
 .hero__content,
-.route,
 .roles .card,
 .co-design,
 .cta {
@@ -310,7 +335,6 @@ button:hover {
 }
 
 @media (max-width: 960px) {
-  .routes,
   .roles,
   .co-design__grid,
   .diagnostics,
@@ -318,6 +342,10 @@ button:hover {
   .chat__grid,
   .principles {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .onboarding__grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -341,7 +369,6 @@ button:hover {
     padding: 3rem 0;
   }
 
-  .routes,
   .roles,
   .co-design__grid,
   .diagnostics,
