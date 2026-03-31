@@ -247,6 +247,26 @@ h1 {
   margin-top: 1rem;
 }
 
+.emotion-fan {
+  padding: 1.4rem;
+  background:
+    radial-gradient(circle at left top, rgba(62, 168, 144, 0.13), transparent 45%),
+    var(--surface);
+}
+
+.emotion-fan__image {
+  display: block;
+  width: min(760px, 100%);
+  margin: 0 auto 1rem;
+  border-radius: 12px;
+  border: 1px solid #cdd8d2;
+}
+
+.emotion-fan__link {
+  color: #144951;
+  font-weight: 700;
+}
+
 .onboarding__cta {
   display: inline-block;
   text-decoration: none;

@@ -11,7 +11,6 @@ const metricWho5 = document.getElementById("metric-who5");
 const metricFunctioning = document.getElementById("metric-functioning");
 const metricDirection = document.getElementById("metric-direction");
 const resultOverloaded = document.getElementById("result-overloaded");
-const resultDefaultActions = document.getElementById("result-default-actions");
 
 const WHO_STORAGE_KEY = "kak_ty_who5_answers";
 const FUNC_STORAGE_KEY = "kak_ty_functioning_answers";
@@ -229,7 +228,6 @@ function renderMetrics(metrics) {
 function toggleResultBlocks(headlineKey) {
   const isOverloaded = headlineKey === "headline_overloaded";
   resultOverloaded.hidden = !isOverloaded;
-  resultDefaultActions.hidden = isOverloaded;
 }
 
 function restoreMetrics() {
