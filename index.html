@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Как ты — youth-first платформа</title>
+    <title>Как ты — подкасты, чекапы и безоценочный тест</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,220 +13,145 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <header class="hero" id="top">
       <div class="hero__backdrop"></div>
       <nav class="topbar container">
         <div class="brand">Как ты</div>
         <ul class="menu">
-          <li><a href="#read">Что почитать</a></li>
-          <li><a href="#understand">Как понять</a></li>
-          <li><a href="#discuss">С кем обсудить</a></li>
+          <li><a href="#podcasts">Подкасты</a></li>
+          <li><a href="#checkups">Чекапы</a></li>
         </ul>
       </nav>
       <section class="hero__content container">
-        <h1>Как ты — платформа для подростков и молодых взрослых</h1>
+        <h1>Когда внутри сложно, важно знать: ты не один(а)</h1>
         <p>
-          Помогаем разобраться в эмоциях, мотивации, отношениях и повторяющихся трудностях, чтобы выбрать помощь без
-          стыда и давления.
+          Простая страница для подростков и молодых взрослых: подкасты с похожим опытом, чекапы и безоценочный тест,
+          который помогает увидеть текущее состояние и подумать, что делать дальше.
         </p>
         <ul class="hero__chips">
-          <li>Анонимно</li>
+          <li>Без регистрации</li>
+          <li>Без оценок</li>
           <li>Понятно</li>
-          <li>Конфиденциально</li>
         </ul>
       </section>
     </header>
 
     <main>
       <section class="section container">
-        <h2>С чего начинается маршрут</h2>
         <div class="onboarding card">
-          <h3>Есть странное ощущение, что что-то не так?</h3>
+          <h2>Есть ощущение, что что-то не так?</h2>
           <ul class="symptom-tags">
-            <li><a href="#understand">Прокрастинация</a></li>
-            <li><a href="#understand">Тревога перед экзаменами</a></li>
-            <li><a href="#discuss">Конфликт</a></li>
-            <li><a href="#understand">Бессонница</a></li>
-            <li><a href="#understand">Ничего не хочу</a></li>
-            <li><a href="#understand">Повторяющийся паттерн в отношениях</a></li>
+            <li>Прокрастинация</li>
+            <li>Тревога перед экзаменами</li>
+            <li>Конфликты</li>
+            <li>Бессонница</li>
+            <li>Ничего не хочу</li>
+            <li>Одиночество</li>
           </ul>
           <p class="onboarding__value">
-            Короткий и прямой вход: <strong>“Пойми за 5 минут: разобраться самостоятельно или обсудить с кем-то.”</strong>
+            Пойми за 5 минут, насколько это влияет на тебя и твое состояние — без ярлыков и без давления.
           </p>
-
-          <div class="onboarding__actions">
-            <a class="onboarding__cta" href="check.html">Начать</a>
-          </div>
+          <a class="cta" href="#checkups">Начать</a>
         </div>
       </section>
 
-      <section class="section container" id="emotion-fan">
-        <h2>Палитра эмоций</h2>
-        <div class="emotion-fan card">
-          <img
-            class="emotion-fan__image"
-            src="https://blog.alter.ru/wp-content/uploads/2022/11/433c9572-5151-433c-a81c-605f3599b994-808x1024.jpeg"
-            alt="Цветок эмоций"
-          />
-          <p>
-            Не всегда легко сразу назвать, что именно ты чувствуешь. Чем точнее ты различаешь эмоции, тем проще понять
-            их причину и выбрать рабочий шаг.
-          </p>
-          <p>
-            <a
-              class="emotion-fan__link"
-              href="https://blog.alter.ru/likbez/tablica-chuvstv-i-ehmocij-cheloveka/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Здесь можно почитать, почему важно понимать эмоции, как они влияют на нас и как с ними работать
-            </a>
-          </p>
+      <section class="section container" id="podcasts">
+        <h2>Подкасты: истории ребят с похожими чувствами</h2>
+        <p class="lead">Слушай опыт других и замечай: твои переживания реальны, и ты не один(а).</p>
+        <p class="lead lead--schedule">Новые подкасты публикуются раз в 2 недели.</p>
+        <div class="cards cards--3">
+          <article class="card podcast">
+            <h3>«Мне ведь не так уж плохо. Зачем вообще психолог?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Психолог, карьерный консультант, тьютор, психиатр, коуч: кто чем помогает?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Что происходит на первой сессии и что значит конфиденциальность?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Почему я ничего не хочу: лень, выгорание или потеря контакта с собой?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Чего я хочу на самом деле, а чего от меня просто ждут?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Стыд, перфекционизм и прокрастинация: почему я всё откладываю?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Почему у меня повторяются одни и те же отношения?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Родители, границы и сепарация без войны»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Парням и мужчинам тоже можно просить помощи»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Соцсети, инста-жизнь, сравнение себя с другими и одиночество»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Как работает онлайн-терапия и почему регулярность важнее рывков?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
+          <article class="card podcast">
+            <h3>«Свой или чужой: с кем я дружу и почему друзей приходится выбирать?»</h3>
+            <p class="podcast__date">Дата выпуска:</p>
+            <button type="button" disabled aria-disabled="true">Скоро</button>
+          </article>
         </div>
       </section>
 
-      <section class="section container" id="principles">
-        <h2>5 обязательных принципов платформы</h2>
-        <div class="principles">
-          <article class="card principle">
-            <h3>Конфиденциальность</h3>
-            <p>Прозрачно объясняем, что защищено, где есть границы и в каких случаях нужно эскалировать помощь.</p>
-          </article>
-          <article class="card principle">
-            <h3>Честные роли</h3>
-            <p>Отдельно объясняем, чем отличаются коуч, терапевт и психиатр, чтобы выбор был осознанным.</p>
-          </article>
-          <article class="card principle">
-            <h3>Ценность до входа</h3>
-            <p>Первые тесты, материалы и самопонимание доступны до регистрации.</p>
-          </article>
-          <article class="card principle">
-            <h3>Живой контакт</h3>
-            <p>Из любого шага есть быстрый выход к специалисту, если нужна поддержка здесь и сейчас.</p>
-          </article>
-          <article class="card principle">
-            <h3>Прогресс-трекинг</h3>
-            <p>Показываем путь, сохраненные шаги и динамику состояния, чтобы видеть изменения во времени.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container" id="read">
-        <h2>Что почитать</h2>
-        <div class="library">
-          <a class="card card-link" href="articles.html">
-            <h3>Статьи</h3>
-            <p>Короткие тексты без сложных терминов: эмоции, мотивация, прокрастинация, отношения и границы.</p>
+      <section class="section container" id="checkups">
+        <h2>Чекапы и чеклисты</h2>
+        <p class="lead">Простые материалы, чтобы понять состояние и выбрать следующий шаг.</p>
+        <div class="cards cards--2">
+          <article class="card checklist">
+            <h3>Чекапы</h3>
             <ul>
-              <li>Почему я выгораю в учебе</li>
-              <li>Что делать с постоянной тревогой</li>
-              <li>Как говорить о своих чувствах</li>
+              <li>Как я себя чувствую</li>
+              <li>Что делать, если не хочется в школу</li>
+              <li>Как понять: усталость или тревога</li>
+              <li>Когда стоит попросить поддержки</li>
             </ul>
-            <span class="card-link__cta">Открыть раздел статей</span>
-          </a>
-          <article class="card">
-            <h3>Подкасты</h3>
-            <p>Аудио-эпизоды с историями опыта и разбором частых вопросов про психическое здоровье.</p>
+          </article>
+          <article class="card checklist">
+            <h3>Чеклисты</h3>
             <ul>
-              <li>10 минут “что со мной происходит”</li>
-              <li>Как начать терапию без стыда</li>
-              <li>Как понять, что нужен перерыв</li>
+              <li>План на сложную неделю без перегруза</li>
+              <li>Как пережить конфликт с друзьями или родителями</li>
+              <li>Как восстановить сон и ритм дня</li>
+              <li>Что можно сделать за 10 минут, когда накрывает</li>
             </ul>
           </article>
-        </div>
-      </section>
-
-      <section class="section container" id="understand">
-        <h2>Как понять</h2>
-        <div class="diagnostics">
-          <article class="card">
-            <h3>Тесты состояния</h3>
-            <p>Быстрые self-check тесты на стресс, тревогу, усталость и эмоциональное напряжение.</p>
-          </article>
-          <article class="card">
-            <h3>Диагностика паттернов</h3>
-            <p>Помогаем увидеть повторяющиеся реакции: избегание, самокритика, страх отказа, эмоциональные качели.</p>
-          </article>
-          <article class="card">
-            <h3>Маршрут помощи</h3>
-            <p>На основе ответов подсказываем: начать с коучинга, терапии, психиатра или комбинированного пути.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container" id="discuss">
-        <div class="chat card">
-          <h2>С кем обсудить</h2>
-          <p>
-            Онлайн-чат со специалистом помогает безопасно задать первые вопросы: что со мной, какой формат помощи мне
-            подходит и с чего лучше начать.
-          </p>
-          <div class="chat__grid">
-            <div>
-              <h3>Что можно обсудить</h3>
-              <p>Тревогу, апатию, конфликты, потерю мотивации, повторяющиеся трудности в отношениях и учебе.</p>
-            </div>
-            <div>
-              <h3>Как это работает</h3>
-              <p>Анонимный первый контакт, понятные шаги, подбор специалиста и переход в регулярный формат поддержки.</p>
-            </div>
-          </div>
-          <a class="onboarding__cta" href="https://bemeta.co/" target="_blank" rel="noopener noreferrer">
-            Подобрать специалиста
-          </a>
-        </div>
-      </section>
-
-      <section class="section container">
-        <h2>Кто что делает</h2>
-        <div class="roles">
-          <article class="card">
-            <h3>Коучинг</h3>
-            <p>Фокус на целях, выборе и действиях в настоящем.</p>
-          </article>
-          <article class="card">
-            <h3>Терапия</h3>
-            <p>Глубокая работа с повторяющимися переживаниями и отношениями.</p>
-          </article>
-          <article class="card">
-            <h3>Психиатрия</h3>
-            <p>Диагностика состояний и медикаментозная поддержка, когда нужно.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container">
-        <div class="co-design card">
-          <h2>Продукт делается вместе с молодежью</h2>
-          <p>
-            Не “взрослые придумали и отдали”, а постоянный co-design: подростки и молодые взрослые участвуют в
-            тестировании сценариев, текстов и формата контакта.
-          </p>
-          <div class="co-design__grid">
-            <div>
-              <h3>Форматы участия</h3>
-              <p>Интервью, продуктовые дневники, мини-пилоты, молодежный advisory board.</p>
-            </div>
-            <div>
-              <h3>Что проверяем</h3>
-              <p>Ясность языка, чувство безопасности, доверие и готовность к регулярной помощи.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--cta">
-        <div class="container cta">
-          <h2>Первый шаг без давления</h2>
-          <p>Можно начать анонимно с 5-минутного self-check, а решение о регулярной работе принять позже.</p>
-          <a class="onboarding__cta" href="check.html">Начать сейчас</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <p>Как ты • Онлайн-формат как бережный вход в регулярную помощь</p>
+        <p>Как ты • Ты не один(а). С тобой все имеет смысл.</p>
       </div>
     </footer>
   </body>
